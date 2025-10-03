@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResillentConstruction.MorePage"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls" 
+             ios:Page.UseSafeArea="true"   >
+
+    <NavigationPage.TitleView>
+        <Grid x:Name="Custom_Navigation">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="ic_himachallogo.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" VerticalOptions="Center"/>
+            <Grid Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label x:Name="lbl_navigation_header"  FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Grid>
+            <Image Source="ic_launcher.png" HeightRequest="40" Grid.Column="2" VerticalOptions="Center"/>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <ScrollView Grid.Row="0">
+                <Grid Margin="0" RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                            <Image Source="ic_launcher" HorizontalOptions="Center" WidthRequest="130" HeightRequest="80" Margin="0,10,0,0" Grid.Row="0"/>
+                            <Label x:Name="lbl_appname" FontSize="Large" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="0,-5,0,0" Grid.Row="1"/>
+                            <Label x:Name="lbl_appversion" FontSize="Small" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" Margin="0,-5,0,5" Grid.Row="2"/>
+
+                            <Label x:Name="Lbl_HP" HorizontalOptions="Center" HorizontalTextAlignment="Center" IsVisible="false" Grid.Row="3"/>
+                            <Grid Grid.Row="4" Margin="0,0,0,5">
+                                <Label x:Name="lbl_dept" Text="Himachal Pradesh State Disaster Management Authority (HPSDMA), Shimla" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="5,0,0,0"/>
+                                <!--&#10;-->
+                            </Grid>
+                            <Grid Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="5">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="Deptt_Call"
+                                NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_phone" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_call" Text="Call Us" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" Grid.Row="6"/>
+
+                            <Grid Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="7">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="deptt_WebSite"
+                                NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_website" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_website" Text="Website" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" Grid.Row="8"/>
+
+                            <Grid Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="9">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="Deptt_email"
+                                NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_email" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_email" Text="Email" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" Grid.Row="10"/>
+                            <Grid Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="11">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="policytapped"
+                                NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="policy.png" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_policy" Text="Privacy Policy" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" IsVisible="false" Grid.Row="12"/>
+                            <Grid Padding="5" IsVisible="false" ColumnSpacing="10" Grid.Row="13">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="raisequerytapped" NumberOfTapsRequired="1" />        
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_query.png" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_raisequery" Text="Raise Query" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+                            <!--delete account option 
+                                Are you sure you want to delete the account \n. Once deleted, your data will be deleted permenanty and cannot be recovered  
+-->
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" IsVisible="false" Grid.Row="12"/>
+                            <Grid Padding="5" IsVisible="false" ColumnSpacing="10" Grid.Row="13">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="deleteAccountTapped" NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_query.png" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_delete" Text="Delete Account" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+
+                            <!--<BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0"/>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="AuthorizedUsertapped" NumberOfTapsRequired="1" /j
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="ic_user.png" HeightRequest="20"/>
+                                <Label x:Name="lbl_authuser" Text="Authorized User"  HorizontalOptions="FillAndExpand"   FontSize="16" FontAttributes="Bold"/>
+                            </StackLayout>-->
+
+                           
+                            
+                            
+                            <!--<BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0"/>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="logoutTapped"
+                                NumberOfTapsRequired="1" />
+                                </StackLayout.GestureRecognizers>
+                                <Image Source="ic_logout1.png" HeightRequest="20"/>
+                                <Label x:Name="lbl_logout" Text="Logout"  HorizontalOptions="FillAndExpand"  FontSize="16" FontAttributes="Bold" />
+                            </StackLayout>-->
+
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" Grid.Row="14"/>
+                            <Grid Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="15">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                Tapped="languagetapped"
+                                NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image HeightRequest="20" Grid.Column="0">
+                                    <Image.Source>
+                                        <AppThemeBinding Light="language_ico.png" Dark="white_language_ico.png" />
+                                    </Image.Source>
+                                </Image>
+                                <Label x:Name="lbl_language" Text="Change Language" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+                            <BoxView BackgroundColor="SkyBlue" HeightRequest="1" Margin="10,0,0,0" Grid.Row="16"/>
+                            <Grid x:Name="stack_profile" Padding="5" Margin="0,5,0,5" ColumnSpacing="10" Grid.Row="17">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                  Tapped="profiletapped"
+                                  NumberOfTapsRequired="1" />           
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="ic_usericon.png" HeightRequest="20" Grid.Column="0"/>
+                                <Label x:Name="lbl_profile" Text="profile" FontSize="16" FontAttributes="Bold" Grid.Column="1"/>
+                            </Grid>
+
+                            <Image Source="ic_niclogo.png" HorizontalOptions="Center" WidthRequest="130" HeightRequest="50" Margin="0,20,0,0" Grid.Row="18"/>
+                </Grid>
+            </ScrollView>
+
+            <Grid Grid.Row="1" VerticalOptions="End" Style="{StaticResource FooterGridStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tab_Home_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Tab_Home_Image" Source="ic_Homewhite.png" HeightRequest="20" Grid.Row="0"/>
+                    <Label x:Name="Tab_Home_Label" Text="Home" Style="{StaticResource LabelStyle_TabMenu}" Grid.Row="1"/>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tab_Download_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Tab_Download_Image" Source="ic_downloadwhite.png" HeightRequest="20" Grid.Row="0"/>
+                    <Label x:Name="Tab_Download_Label" Text="Download" Style="{StaticResource LabelStyle_TabMenu}" Grid.Row="1"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tab_Settings_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="Tab_Settings_Image" Source="ic_more.png" HeightRequest="20" Grid.Row="0"/>
+                    <Label x:Name="Tab_Settings_Label" Text="More" Style="{StaticResource LabelStyle_TabMenu}" Grid.Row="1"/>
+                </Grid>
+
+            </Grid>
+        </Grid>
+
+        <ContentView x:Name="Loading_activity" BackgroundColor="#C0808080" Padding="20, 20" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                <Border BackgroundColor="White" Padding="1">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="5"/>
+                    </Border.StrokeShape>
+                    <Grid Padding="6" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <ActivityIndicator IsVisible="true" IsRunning="true" Margin="5" Grid.Column="0"/>
+                        <Label x:Name="Lbl_PleaseWait" Text="Please Wait ..." Style="{StaticResource LabelStyle}" WidthRequest="600" Grid.Column="1"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </ContentView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ResillentConstruction.ViewWebHtml"  
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls" 
+ios:Page.UseSafeArea="true">
+
+    <NavigationPage.TitleView  >
+        <Grid x:Name="Custom_Navigation">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="ic_himachallogo.png" HeightRequest="40" WidthRequest="40" Grid.Column="0" VerticalOptions="Center"/>
+            <Grid Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label x:Name="lbl_navigation_header"  FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </Grid>
+            <!-- <Image Source="ic_launcher.png"  HeightRequest="50"  VerticalOptions="CenterAndExpand"/> -->
+        </Grid>
+    </NavigationPage.TitleView>
+
+
+
+
+
+    <!--<ContentPage.ToolbarItems >
+        <ToolbarItem Text="🏠" x:Name="Home" Clicked="HomeBtn"/>
+        <ToolbarItem Text="⚙" x:Name="settings" Clicked="SettingBtn"/>
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!--<BoxView BackgroundColor="White" HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,3,0,0"/>-->
+            <!--<Label x:Name="lbl_Topheading" FontAttributes="Bold" FontSize="Large" VerticalOptions="Start" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="Black"/>-->
+            <Label Grid.Row="0" HorizontalTextAlignment="Center" x:Name="lbl_Topheading" TextColor="White" BackgroundColor="#c4913f"
+                   FontAttributes="Bold" FontSize="20" Margin="0" Padding="0"/>
+
+            <!--<Label HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" x:Name="lbl_pgname"  TextColor="White" BackgroundColor="#c4913f"
+FontAttributes="Bold" FontSize="20" Margin="0" Padding="0"/>-->
+            
+            <BoxView Grid.Row="1" BackgroundColor="Navy" HeightRequest="2"/>
+            
+            <WebView Grid.Row="2" x:Name="browser" 
+                     MinimumWidthRequest="0" MinimumHeightRequest="0"
+                     Scale="1" ScaleX="1" ScaleY="1"/>
+            <!--<Label x:Name="Footer" VerticalOptions="End" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#0D4C88"/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
